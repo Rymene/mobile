@@ -1,0 +1,169 @@
+body {
+    margin: 0; /* Supprime toutes les marges */
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: #f1f1f1f1;
+}
+
+.nav-item, .drop-item {
+    color: transparent;
+}
+
+.navbar {
+    background-color: #2f2f2f; /* Couleur de fond de la barre de navigation */
+    padding: 10px; /* Marge intérieure */
+    display: flex; /* Permet de déplacer les éléments */
+    justify-content: space-between; /* Espacement entre les 2 */
+    align-items: center; /* Alignement vertical */
+    position: relative; 
+}
+
+.icon { 
+    fill: #f1f1f1f1; /* On remplit les rectangles en blanc. ATTENTION c'est un svg => fill*/
+    cursor: pointer; /* Lorsque l'on passe le curseur il y a une main */
+}
+.icon:hover { /* Lorsque l'on survole sur le burger : */
+    fill:rgb(255, 63, 63); /* il change de couleur */
+    transition-duration: 0.5s; /* l'effet dure 0.5s */
+}
+
+.navbar input, .nav-menu, .dropdown{
+    display: none; /* On cache toutes les petites cases à cocher*/
+}
+
+[id^=btn]:checked + ul { /* Toutes les checkbox avec l'id commençant par btn + les ul*/
+    display: block; /* Quand c'est cliqué alors on affiche nos dropdown */
+    z-index: 50;
+}
+
+.nav-menu {
+    background-color: #2f2f2fd0;
+    position: absolute;
+    top: 117px;
+    left: 0;
+    right: 0;
+    border: rgb(255, 63, 63) 1px solid;
+}
+
+.nav-item a, .drop-item a, .show{
+    color: #f1f1f1f1;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 1.2rem;
+}
+
+.nav-menu a:hover:not(#home), .show:hover { /* Quand on survole les boutons excepté celui avec l'id Home */
+    color: rgb(255, 63, 63);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px){ /* On utilise une média queries pour que le site soit responsive, un écran ayant moins de 768 px de largeur aura les propriétés suivantes */
+    .icon {
+        display: none;
+    }
+    .nav-menu {
+        display: initial;
+        position: static;
+    }
+    .nav-item {
+        display: inline-block;
+        margin-right: 50px;
+        position: relative;
+        text-decoration: none;
+    }
+    .dropdown {
+        position: absolute;
+        border: rgb(255, 63, 63) 1px solid;
+        background-color: #2f2f2fd0;
+        top: 70px;
+        right: 0;
+        padding-right: 40px;
+        width: max-content;
+    }
+    
+}
+
+#home {
+    background-color: rgb(255, 63, 63);
+    padding: 10px;
+}
+
+#home:hover {
+    background-color: red;
+    transition-duration: 0.5s;
+}
+
+body::-webkit-scrollbar {
+    width: 12px; 
+}
+  
+body::-webkit-scrollbar-track {
+    background: #2f2f2f; 
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 63, 63); 
+    border-radius: 20px; 
+    border: 3px solid #2f2f2f; 
+}
+
+#logo-vid {
+    width: 110px; 
+}
+
+h1 {
+    color: #f1f1f1f1;
+    background-color: #2f2f2f;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .activite {
+        background-color: #2f2f2f;
+        margin: 10px;
+        border-radius: 5px;
+        padding: 50px;
+        color: #f1f1f1f1;
+        width: 30%;
+        text-align: left;
+        line-height: 30px;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activite {
+        background-color: #2f2f2f;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 50px;
+        color: #f1f1f1f1;
+        width: 50%;
+        text-align: left;
+        line-height: 30px;
+        font-size: 1.3rem;
+    }
+}
+.chapter{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}

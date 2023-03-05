@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNT | Thème 1</title>
+    <link rel="stylesheet" href="snt-t1.css"> 
+    
+</head>
+
+<body> <!-- Corps du site -->
+
+    <!-- DEBUT EN-TETE -->
+    <nav class="navbar"> <!-- BARRE DE NAVIGATION -->
+        <a href="index.html"><video src="logo.mp4" id="logo-vid" autoplay muted></video></a> <!-- Bouton Logo -->
+
+        <label for="btn" class="icon"> <!-- Le label permet de rendre "clicable" le "burger" -->
+            <!-- Le SVG correstpond au "Burger" -->
+            <svg viewBox="0 0 100 80" width="40" height="40">  <!-- Taille-->
+                <rect width="100" height="15"></rect> <!-- 1er rectangle (1er trait) -->
+                <rect y="35" width="100" height="15"></rect> <!-- 2eme rectangle (2eme trait) (y pour écarter les traits)-->
+                <rect y="70" width="100" height="15"></rect> <!-- 3eme rectangle (3eme trait (pareil pour le y)) -->
+            </svg> 
+        </label>
+        <input type="checkbox" id="btn"> <!-- Case à Cocher, elle est reliée au label grâce à l'ID -->
+
+        <ul class="nav-menu"> <!-- On a un dans la barre de Navigation -->
+            <li class="nav-item"> <!-- Les "items" sont les boutons dans le menu-->
+                    <a href="index.html" id="home">Accueil</a> <!-- Le bouton Accueil -->
+            </li>
+
+            <li class="nav-item">
+                <label for="btn2" class="show">Maths</label> <!-- même chose qu'en haut-->
+                <input type="radio" id="btn2" name="subject"> <!-- On utilise radio pour qu'un seul menu puisse être activé en même temps -->
+                <ul class="dropdown"> <!-- menu déroulant -->
+                    <li class="drop-item"> <!-- c'est l'élément enfant du dropdown d'où le : drop-item -->
+                        <a href="maths-t1.html">Nombres réels et Calculs</a> <!-- Bouton Chapitre 1 -->
+                    </li>
+                    <li class="drop-item">
+                        <a href="maths-t2.html">Fonctions</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="maths-t3.html">Géométrie</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="maths-t4.html">Statistiques et Probabilités</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Pour les autres boutons le fonctionnement est le même -->
+
+            <li class="nav-item">
+                <label for="btn3" class="show">P/C</label>
+                <input type="radio" id="btn3" name="subject"> 
+                <ul class="dropdown">
+                    <li class="drop-item">
+                        <a href="pc-t1.html">Constitution et transformation de la matière</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="pc-t2.html">Mouvements et intéractions</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="pc-t3.html">Ondes et Signaux</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <label for="btn4" class="show">SES</label>
+                <input type="radio" id="btn4" name="subject">
+                <ul class="dropdown">
+                    <li class="drop-item">
+                        <a href="ses-t1.html">Science économique</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="ses-t2.html">Sociologie et Science Politique</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="ses-t3.html">Regards croisés</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <label for="btn5" class="show">SNT</label>
+                <input type="radio" id="btn5" name="subject">
+                <ul class="dropdown">
+                    <li class="drop-item">
+                        <a href="snt-t1.html">Les données structurées</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="snt-t2.html">Internet</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="snt-t3.html">Le Web</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="snt-t4.html">Localisation, cartographie</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="snt-t5.html">La photographie numérique</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="snt-t6.html">Les réseaux sociaux</a>
+                    </li>
+                    <li class="drop-item">
+                        <a href="snt-t7.html">Informatique embarquée</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<!-- FIN EN-TETE -->
+
+<h1>SNT / THÈME 1 : Les données structurées</h1>
+<div class="flexbox">
+
+    <div class="activite"><h2>Activité 1 : Quels sont les éléments marquants de l'histoire des données ?</h2></div>
+    <div class="activite"><h2>Activité 2 : Que sont les données personnelles et les métadonnées ?</h2></div>
+    <div class="activite"><h2>Activité 3 : Comment structurer les données ?</h2></div>
+    <div class="activite"><h2>Activité 4 : Quels sont les enjeux et les risques du Big Data ?</h2></div>
+    <div class="activite"><h2>Activité 5 : Comment exploiter des données ?</h2></div>
+    <div class="activite"><h2>Activité 6 : Comment intéragir avec le <em>Cloud</em> ?</h2></div>
+
+</div>
+
+
+</body> 
+</html>
